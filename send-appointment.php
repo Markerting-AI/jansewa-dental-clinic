@@ -211,7 +211,7 @@ Kamla Nagar, Delhi - 110007
 ";
 
 
-$doctorHeaders = "From: Jansewa Dental Clinic From: Jansewa Dental Clinic <appointments@jansewadentalclinic.com>\r\n";
+$doctorHeaders = "From: Jansewa Dental Clinic <appointments@jansewadentalclinic.com>\r\n";
 $doctorHeaders .= "Reply-To: $email\r\n";
 $doctorHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
