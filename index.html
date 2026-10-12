@@ -10,20 +10,51 @@
 
 <body>
 
-    <nav id="navbar">
+<nav id="navbar" class="mobile-nav-enabled">
 
-        <img src="images/logo.png" alt="Jansewa Dental Clinic Logo">
+    <a href="index.html"
+   class="site-logo"
+   aria-label="Jansewa Dental Clinic home">
 
-       <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="treatments.html">Treatments</a>
-    <a href="contact.html">Contact</a>
+    <img src="images/logo.png"
+         alt="Jansewa Dental Clinic">
+
+</a>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu" id="mainMenu">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="treatments.html">Treatments</a>
+        <a href="contact.html">Contact</a>
+
+        <a class="mobile-call-link" href="tel:+919891747222">
+            Call Now
+        </a>
+
     </div>
 
-        <button onclick="window.location.href='tel:+919891747222'">Call Now</button>
+    <button
+        class="desktop-call-button"
+        onclick="window.location.href='tel:+919891747222'"
+    >
+        Call Now
+    </button>
 
-    </nav>
+</nav>
 
     <header>
 
@@ -446,7 +477,7 @@
 
     <div class="doctor-image">
 
-        <img src="images/Dr Rishu Bedi.png"
+        <img src="images/dr-rishu-bedi.png"
              alt="Dr. Rishu Bedi">
 
     </div>
@@ -875,7 +906,7 @@
                     10:30 AM – 2:00 PM<br>
                     
                     Monday – Friday<br>
-                    
+
                     5:00 PM – 7:00 PM
 
                 </p>

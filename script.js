@@ -48,3 +48,64 @@ function showNextSlide() {
 
 // Start the slider
 slideTimer = setTimeout(showNextSlide, 7000);
+
+// =========================================
+// MOBILE NAVIGATION - JANSEWA
+// =========================================
+
+const menuToggle = document.getElementById("menuToggle");
+const mainMenu = document.getElementById("mainMenu");
+
+if (navbar && menuToggle && mainMenu) {
+
+    function closeMobileMenu() {
+        mainMenu.classList.remove("is-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+    }
+
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = mainMenu.classList.toggle("is-open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+    });
+
+    // Close after selecting a menu link
+
+    mainMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Close when clicking outside the navigation
+
+    document.addEventListener("click", function (event) {
+        if (!navbar.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    // Close the dropdown when returning to desktop width
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+            closeMobileMenu();
+        }
+    });
+
+}
